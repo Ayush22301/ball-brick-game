@@ -157,8 +157,10 @@ function func()
   hitting();
     
   fill("red")
-  text("score: ",0,200);
-  text(score,35,200);
+  text("Score: ",0,300);
+  text(score,35,300);
+  text("Lives Remaining: ",0,320);
+  text(lives,95,320);
   // return -1;
 }
 function draw() {
@@ -173,7 +175,8 @@ function draw() {
       if(x===0)
         {
           lives = lives-1;
-          ball_dx = -1.1*ball_dx;
+          score = 0;
+          ball_dx = -1.2*ball_dx;
           ball_dy = -1.1*ball_dy;
           create_grid();
           ball_y = height/2;
